@@ -13,7 +13,8 @@ export default function TendaWiFiForm() {
     wifiName: 'Nitish Pandat 5G',
     address: 'O-24 Gali No 8 Saurabh Vihar Jaitpur Badarpur New Delhi',
     routerName: 'Tenda',
-    username: 'admin'
+    username: 'admin',
+    phoneNumber: '9650544042'
   };
 
   const handleSubmit = async (e) => {
@@ -151,6 +152,18 @@ export default function TendaWiFiForm() {
             />
           </div>
 
+<div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Phone No.
+            </label>
+            <input
+              type="number"
+              value={wifiInfo.phoneNumber}
+              disabled
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-600 focus:outline-none"
+            />
+          </div>
+
           {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -210,4 +223,5 @@ export default function TendaWiFiForm() {
       </div>
     </div>
   );
+
 }
